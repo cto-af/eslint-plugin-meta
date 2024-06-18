@@ -4,6 +4,6 @@ import eslintPlugin from "eslint-plugin-eslint-plugin";
 
 export default [
     pluginJs.configs.recommended,
-    ...pluginNode.configs["flat/mixed-esm-and-cjs"],
+    pluginNode.configs["flat/recommended"],
     eslintPlugin.configs["flat/recommended"]
 ];
