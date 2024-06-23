@@ -7,18 +7,18 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import en from "eslint-plugin-n";
-import rule from "../../lib/rules/no-unknown-rules.js";
-import {RuleTester} from "eslint";
+import Eplugin from 'eslint-plugin-eslint-plugin';
+import {RuleTester} from 'eslint';
+import rule from '../../lib/rules/no-unknown-rules.js';
 
 // Avoid freezeDeeply issue
-const n = {
-  rules: en.rules,
+const plugin = {
+  rules: Eplugin.rules,
 };
 
 const settings = {
   meta: {
-    libs: { n }
+    libs: {plugin},
   },
 };
 
@@ -27,15 +27,15 @@ const settings = {
 //------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester();
-ruleTester.run("no-unknown-rules", rule, {
+ruleTester.run('no-unknown-rules', rule, {
   valid: [
     {
       code: `export default {
 rules: {
-  'n/handle-callback-err': 'error',
+  'plugin/fixer-return': 'error',
 }}`,
       settings,
-    }
+    },
   ],
 
   invalid: [
@@ -44,14 +44,14 @@ rules: {
 rules: {
   'bad-unknown-bad': 'error',
 }}`,
-      errors: [{ messageId: "unknown", type: "Literal" }],
+      errors: [{messageId: 'unknown', type: 'Literal'}],
     },
     {
       code: `export default {
 rules: {
   'foo/bad-unknown-bad': 'error',
 }}`,
-      errors: [{ messageId: "unknownPrefix", type: "Literal" }],
+      errors: [{messageId: 'unknownPrefix', type: 'Literal'}],
     },
   ],
 });

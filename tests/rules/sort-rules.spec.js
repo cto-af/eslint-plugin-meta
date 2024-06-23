@@ -7,8 +7,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import rule from "../../lib/rules/sort-rules.js";
-import {RuleTester} from "eslint";
+import {RuleTester} from 'eslint';
+import rule from '../../lib/rules/sort-rules.js';
 
 //------------------------------------------------------------------------------
 // Tests
@@ -17,7 +17,7 @@ import {RuleTester} from "eslint";
 const settings = {};
 
 const ruleTester = new RuleTester();
-ruleTester.run("sort-rules", rule, {
+ruleTester.run('sort-rules', rule, {
   valid: [
     {
       code: `export default {
@@ -35,7 +35,7 @@ ruleTester.run("sort-rules", rule, {
 rules: {
   'array-callback-return': ['error', {allowImplicit: true}],
 }}`,
-      errors: [{ messageId: "beforeAny", type: "Literal" }],
+      errors: [{messageId: 'beforeAny', type: 'Literal'}],
       settings,
     },
     {
@@ -45,7 +45,7 @@ rules: {
   'constructor-super': 'error',
   'array-callback-return': ['error', {allowImplicit: true}],
 }}`,
-      errors: [{ messageId: "outOfOrder", type: "Literal" }],
+      errors: [{messageId: 'outOfOrder', type: 'Literal'}],
       settings,
     },
   ],

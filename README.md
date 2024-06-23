@@ -1,4 +1,4 @@
-# eslint-plugin-eslint-meta
+# "@cto.af/eslint-plugin-meta
 
 Ensure eslint all rules are sorted, not deprecated, and included
 
@@ -10,36 +10,27 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-eslint-meta`:
+Next, install `"@cto.af/eslint-plugin-meta`:
 
 ```sh
-npm install eslint-plugin-eslint-meta --save-dev
+npm install "@cto.af/eslint-plugin-meta --save-dev
 ```
 
 ## Usage
 
-Add `eslint-meta` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `eslint-meta` to the plugins section of your `eslint.config.js` configuration file:
 
-```json
-{
-    "plugins": [
-        "eslint-meta"
-    ]
-}
+```js
+import meta from '@cto.af/eslint-plugin-meta';
+export default [
+  {
+    files: [
+      'eslint.config.js'
+    ],
+    ...meta.configs.recommended,
+  },
+];
 ```
-
-
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "eslint-meta/rule-name": 2
-    }
-}
-```
-
-
 
 ## Configurations
 
@@ -47,12 +38,8 @@ Then configure the rules you want to use under the rules section.
 TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
 <!-- end auto-generated configs list -->
 
-
-
 ## Rules
 
 <!-- begin auto-generated rules list -->
 TODO: Run eslint-doc-generator to generate the rules list.
 <!-- end auto-generated rules list -->
-
-
