@@ -13,7 +13,7 @@ importers:
     devDependencies:
       '@cto.af/eslint-config':
         specifier: github:cto-af/eslint-config
-        version: https://codeload.github.com/cto-af/eslint-config/tar.gz/6afc675e790fe1277ce4a4a69bb62a5d78cbde7b(eslint@9.5.0)(typescript@5.5.2)
+        version: https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5(eslint@9.5.0)(typescript@5.5.2)
       '@stylistic/eslint-plugin':
         specifier: 2.2.2
         version: 2.2.2(eslint@9.5.0)(typescript@5.5.2)
@@ -26,6 +26,9 @@ importers:
       eslint-plugin-eslint-plugin:
         specifier: ^6.1.0
         version: 6.1.0(eslint@9.5.0)
+      eslint-plugin-mocha:
+        specifier: 10.4.3
+        version: 10.4.3(eslint@9.5.0)
       mocha:
         specifier: ^10.4.0
         version: 10.4.0
@@ -35,8 +38,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/6afc675e790fe1277ce4a4a69bb62a5d78cbde7b':
-    resolution: {tarball: https://codeload.github.com/cto-af/eslint-config/tar.gz/6afc675e790fe1277ce4a4a69bb62a5d78cbde7b}
+  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5':
+    resolution: {tarball: https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5}
     version: 4.0.2
     engines: {node: '>=18'}
 
@@ -362,6 +365,12 @@ packages:
     peerDependencies:
       eslint: '>=8.23.0'
 
+  eslint-plugin-mocha@10.4.3:
+    resolution: {integrity: sha512-emc4TVjq5Ht0/upR+psftuz6IBG5q279p+1dSRDeHf+NS9aaerBi3lXKo1SEzwC29hFIW21gO89CEWSvRsi8IQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      eslint: '>=7.0.0'
+
   eslint-plugin-n@17.9.0:
     resolution: {integrity: sha512-CPSaXDXdrT4nsrOrO4mT4VB6FMUkoySRkHWuuJJHVqsIEjIeZgMY1H7AzSwPbDScikBmLN82KeM1u7ixV7PzGg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -490,6 +499,10 @@ packages:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
     deprecated: Glob versions prior to v9 are no longer supported
+
+  globals@13.24.0:
+    resolution: {integrity: sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==}
+    engines: {node: '>=8'}
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
@@ -724,6 +737,9 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  rambda@7.5.0:
+    resolution: {integrity: sha512-y/M9weqWAH4iopRd7EHDEQQvpFPHj1AA3oHozE9tfITHUtTR7Z9PSlIRRG2l1GuW7sefC1cXFfIcF+cgnShdBA==}
+
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
@@ -829,6 +845,10 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
+  type-fest@0.20.2:
+    resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
+    engines: {node: '>=10'}
+
   typescript@5.5.2:
     resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
     engines: {node: '>=14.17'}
@@ -896,7 +916,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/6afc675e790fe1277ce4a4a69bb62a5d78cbde7b(eslint@9.5.0)(typescript@5.5.2)':
+  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5(eslint@9.5.0)(typescript@5.5.2)':
     dependencies:
       '@stylistic/eslint-plugin': 2.2.2(eslint@9.5.0)(typescript@5.5.2)
       eslint-plugin-n: 17.9.0(eslint@9.5.0)
@@ -1243,6 +1263,13 @@ snapshots:
       eslint-utils: 3.0.0(eslint@9.5.0)
       estraverse: 5.3.0
 
+  eslint-plugin-mocha@10.4.3(eslint@9.5.0):
+    dependencies:
+      eslint: 9.5.0
+      eslint-utils: 3.0.0(eslint@9.5.0)
+      globals: 13.24.0
+      rambda: 7.5.0
+
   eslint-plugin-n@17.9.0(eslint@9.5.0):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.5.0)
@@ -1408,6 +1435,10 @@ snapshots:
       inherits: 2.0.4
       minimatch: 5.0.1
       once: 1.4.0
+
+  globals@13.24.0:
+    dependencies:
+      type-fest: 0.20.2
 
   globals@14.0.0: {}
 
@@ -1623,6 +1654,8 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  rambda@7.5.0: {}
+
   randombytes@2.1.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -1712,6 +1745,8 @@ snapshots:
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
+
+  type-fest@0.20.2: {}
 
   typescript@5.5.2: {}
 

@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "test": "c8 mocha tests --recursive"
+    "test": "c8 mocha tests --recursive",
+    "ci": "npm run lint && npm run test"
   },
   "devDependencies": {
     "@cto.af/eslint-config": "github:cto-af/eslint-config",
@@ -25,6 +26,7 @@
     "c8": "10.1.2",
     "eslint": "^9.5.0",
     "eslint-plugin-eslint-plugin": "^6.1.0",
+    "eslint-plugin-mocha": "10.4.3",
     "mocha": "^10.4.0"
   },
   "peerDependencies": {

@@ -27,6 +27,24 @@ ruleTester.run('sort-rules', rule, {
     'constructor-super': 'error',
   }}`,
     },
+    {
+      code: `export default {
+  rules: {
+    // [Unrelated section](https://eslint.org/docs/latest/rules/#suggestions)
+    // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
+    'array-callback-return': ['error', {allowImplicit: true}],
+    'constructor-super': 'error',
+  }}`,
+    },
+    {
+      code: `export default {
+  rules: {
+    // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
+    'array-callback-return': ['error', {allowImplicit: true}],
+    'constructor-super': 'error',
+    // [Unrelated section](https://eslint.org/docs/latest/rules/#suggestions)
+  }}`,
+    },
   ],
 
   invalid: [
