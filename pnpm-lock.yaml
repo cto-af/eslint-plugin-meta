@@ -13,7 +13,7 @@ importers:
     devDependencies:
       '@cto.af/eslint-config':
         specifier: github:cto-af/eslint-config
-        version: https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5(eslint@9.5.0)(typescript@5.5.2)
+        version: https://codeload.github.com/cto-af/eslint-config/tar.gz/42c911cc9ad25b530313a5d7a406e3edd045b4d4(eslint@9.5.0)(typescript@5.5.2)
       '@stylistic/eslint-plugin':
         specifier: 2.2.2
         version: 2.2.2(eslint@9.5.0)(typescript@5.5.2)
@@ -38,8 +38,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5':
-    resolution: {tarball: https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5}
+  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/42c911cc9ad25b530313a5d7a406e3edd045b4d4':
+    resolution: {tarball: https://codeload.github.com/cto-af/eslint-config/tar.gz/42c911cc9ad25b530313a5d7a406e3edd045b4d4}
     version: 4.0.2
     engines: {node: '>=18'}
 
@@ -916,7 +916,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/79fce9addc82f31f0d5fe2c3a7024bf754150ba5(eslint@9.5.0)(typescript@5.5.2)':
+  '@cto.af/eslint-config@https://codeload.github.com/cto-af/eslint-config/tar.gz/42c911cc9ad25b530313a5d7a406e3edd045b4d4(eslint@9.5.0)(typescript@5.5.2)':
     dependencies:
       '@stylistic/eslint-plugin': 2.2.2(eslint@9.5.0)(typescript@5.5.2)
       eslint-plugin-n: 17.9.0(eslint@9.5.0)
