@@ -13,7 +13,7 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm i
-      - run: npm ci
+      - run: npm run ci
       - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
