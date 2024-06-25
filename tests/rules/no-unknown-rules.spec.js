@@ -36,6 +36,15 @@ rules: {
 }}`,
       settings,
     },
+    {
+      code: `
+const ignored = { ignored: 'error' };
+export default {
+rules: {
+  ...ignored,
+  'constructor-super': 'error',
+}}`,
+    },
   ],
 
   invalid: [
@@ -52,6 +61,15 @@ rules: {
   'foo/bad-unknown-bad': 'error',
 }}`,
       errors: [{messageId: 'unknownPrefix', type: 'Literal'}],
+    },
+    {
+      code: `
+const ignored = 'error';
+export default {
+rules: {
+  ignored,
+}}`,
+      errors: [{messageId: 'unknown', type: 'Identifier'}],
     },
   ],
 });

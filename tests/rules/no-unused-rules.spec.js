@@ -32,6 +32,14 @@ rules: {
         ignore: ['@'],
       }],
     },
+    {
+      code: `
+const ignored = { ignored: 'error' };
+export default {
+rules: {
+  ...ignored,
+}}`,
+    },
   ],
 
   invalid: [

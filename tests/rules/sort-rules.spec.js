@@ -45,6 +45,18 @@ ruleTester.run('sort-rules', rule, {
     // [Unrelated section](https://eslint.org/docs/latest/rules/#suggestions)
   }}`,
     },
+    {
+      code: `
+const ignored = { ignored: 'error' };
+export default {
+  rules: {
+    ...ignored,
+    // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
+    'array-callback-return': ['error', {allowImplicit: true}],
+    'constructor-super': 'error',
+    // [Unrelated section](https://eslint.org/docs/latest/rules/#suggestions)
+  }}`,
+    },
   ],
 
   invalid: [
