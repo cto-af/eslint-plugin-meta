@@ -30,6 +30,15 @@ rules: {
 }}`,
       // No settings!
     },
+    {
+      code: `
+const ignored = { ignored: 'error' };
+export default {
+rules: {
+  ...ignored,
+  'constructor-super': 'error',
+}}`,
+    },
   ],
 
   invalid: [
