@@ -15,6 +15,6 @@ jobs:
           cache: pnpm
       - run: pnpm i
       - run: npm run ci
-      - run: npm publish --provenance --access public
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
