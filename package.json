@@ -11,7 +11,10 @@
   "main": "./lib/index.js",
   "type": "module",
   "license": "MIT",
-  "repository": "cto-af/eslint-plugin-meta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cto-af/eslint-plugin-meta.git"
+  },
   "files": [
     "lib"
   ],
