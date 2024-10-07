@@ -32,14 +32,13 @@ export default [
 ];
 ```
 
-## Configurations
-
-<!-- begin auto-generated configs list -->
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-<!-- end auto-generated configs list -->
-
 ## Rules
 
-<!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
-<!-- end auto-generated rules list -->
+<!-- Rule Table Start -->
+| **Rule Name** | **Description** | **Recommended** |
+| :- | :- | :-: |
+| [`no-deprecated-rules`](./docs/rules/no-deprecated-rules.md) | Ensure no deprecated rules are used | yes |
+| [`no-unknown-rules`](./docs/rules/no-unknown-rules.md) | Ensure all rules are valid | yes |
+| [`no-unused-rules`](./docs/rules/no-unused-rules.md) | Ensure all non-deprecated rules are used | yes |
+| [`sort-rules`](./docs/rules/sort-rules.md) | Ensure eslint rules are sorted | yes |
+<!-- Rule Table End -->
