@@ -11,7 +11,10 @@
   "main": "./lib/index.js",
   "type": "module",
   "license": "MIT",
-  "repository": "cto-af/eslint-plugin-meta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cto-af/eslint-plugin-meta.git"
+  },
   "files": [
     "lib"
   ],
@@ -33,6 +36,11 @@
   },
   "peerDependencies": {
     "eslint": ">=9"
+  },
+  "pnpm": {
+    "overrides": {
+      "micromatch": "4.0.8"
+    }
   },
   "packageManager": "pnpm@9.12.1",
   "engines": {
