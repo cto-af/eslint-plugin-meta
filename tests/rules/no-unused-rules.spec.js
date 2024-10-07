@@ -24,6 +24,14 @@ const ruleTester = new RuleTester();
 ruleTester.run('no-unused-rules', rule, {
   valid: [
     {
+      code: `export const rules = {
+  'constructor-super': 'error',
+}`,
+      options: [{
+        ignore: ['@'],
+      }],
+    },
+    {
       code: `export default {
 rules: {
   'constructor-super': 'error',
@@ -56,6 +64,17 @@ rules: {
 rules: {
   'meta/no-unused-rules': 'error',
 }}`,
+      errors: [
+        {messageId: 'unused', type: 'ObjectExpression'},
+        {messageId: 'unused', type: 'ObjectExpression'},
+        {messageId: 'unused', type: 'ObjectExpression'},
+      ],
+      settings,
+    },
+    {
+      code: `export const rules = {
+  'meta/no-unused-rules': 'error',
+}`,
       errors: [
         {messageId: 'unused', type: 'ObjectExpression'},
         {messageId: 'unused', type: 'ObjectExpression'},

@@ -20,6 +20,9 @@ const ruleTester = new RuleTester();
 ruleTester.run('sort-rules', rule, {
   valid: [
     {
+      code: 'export const rules = {}',
+    },
+    {
       code: `export default {
   rules: {
     // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
@@ -75,6 +78,22 @@ rules: {
   'constructor-super': 'error',
   'array-callback-return': ['error', {allowImplicit: true}],
 }}`,
+      errors: [{messageId: 'outOfOrder', type: 'Literal'}],
+      settings,
+    },
+    {
+      code: `export const rules = {
+  'array-callback-return': ['error', {allowImplicit: true}],
+}`,
+      errors: [{messageId: 'beforeAny', type: 'Literal'}],
+      settings,
+    },
+    {
+      code: `export const rules = {
+  // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
+  'constructor-super': 'error',
+  'array-callback-return': ['error', {allowImplicit: true}],
+}`,
       errors: [{messageId: 'outOfOrder', type: 'Literal'}],
       settings,
     },

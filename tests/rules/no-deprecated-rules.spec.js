@@ -18,6 +18,11 @@ const ruleTester = new RuleTester();
 ruleTester.run('no-deprecated-rules', rule, {
   valid: [
     {
+      code: `export const rules = {
+  'constructor-super': 'error',
+}`,
+    },
+    {
       code: `export default {
 rules: {
   'constructor-super': 'error',
@@ -47,6 +52,12 @@ rules: {
 rules: {
   'array-bracket-newline': 'off',
 }}`,
+      errors: [{messageId: 'deprecated', type: 'Literal'}],
+    },
+    {
+      code: `export const rules = {
+  'array-bracket-newline': 'off',
+}`,
       errors: [{messageId: 'deprecated', type: 'Literal'}],
     },
   ],
