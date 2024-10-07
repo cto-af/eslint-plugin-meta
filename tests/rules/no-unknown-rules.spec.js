@@ -30,6 +30,12 @@ const ruleTester = new RuleTester();
 ruleTester.run('no-unknown-rules', rule, {
   valid: [
     {
+      code: `export const rules = {
+  'plugin/fixer-return': 'error',
+}`,
+      settings,
+    },
+    {
       code: `export default {
 rules: {
   'plugin/fixer-return': 'error',
@@ -69,6 +75,14 @@ export default {
 rules: {
   ignored,
 }}`,
+      errors: [{messageId: 'unknown', type: 'Identifier'}],
+    },
+    {
+      code: `
+const ignored = 'error';
+export const rules = {
+  ignored,
+}`,
       errors: [{messageId: 'unknown', type: 'Identifier'}],
     },
   ],
