@@ -16,12 +16,14 @@
     "lib"
   ],
   "scripts": {
+    "table": "generate-rules-table",
     "lint": "eslint .",
     "test": "c8 mocha tests --recursive",
     "ci": "npm run lint && npm run test"
   },
   "devDependencies": {
     "@cto.af/eslint-config": "github:cto-af/eslint-config",
+    "@cto.af/generate-rules-table": "0.0.1",
     "@stylistic/eslint-plugin": "2.9.0",
     "c8": "10.1.2",
     "eslint": "^9.12.0",
