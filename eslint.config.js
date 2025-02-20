@@ -17,7 +17,13 @@ const settings = {
 export default [
   ...es6,
   ...mocha,
-  eslintPlugin.configs['flat/recommended'],
+  {
+    files: [
+      'lib/**/*.[jt]s',
+      'lib/**/*.[cm][jt]s',
+    ],
+    ...eslintPlugin.configs['flat/recommended'],
+  },
   {
     files: [
       '**/*.js',

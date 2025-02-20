@@ -25,7 +25,7 @@
     "ci": "npm run lint && npm run test"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "github:cto-af/eslint-config",
+    "@cto.af/eslint-config": "5.1.10",
     "@cto.af/generate-rules-table": "0.0.1",
     "@stylistic/eslint-plugin": "4.0.1",
     "c8": "10.1.3",
