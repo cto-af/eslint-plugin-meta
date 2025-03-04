@@ -1,49 +1,21 @@
-import es6 from '@cto.af/eslint-config/es6.js';
 import eslintPlugin from 'eslint-plugin-eslint-plugin';
+import globals from "globals";
 import meta from './lib/index.js';
-import mocha from '@cto.af/eslint-config/mocha.js';
-import stylistic from '@stylistic/eslint-plugin';
+import mochaPlugin from "eslint-plugin-mocha";
+import pluginJs from "@eslint/js";
 
-/* eslint meta/no-unused-rules: ["error", {ignore: ["@stylistic"]}] */
-
-const settings = {
-  meta: {
-    libs: {
-      '@stylistic': stylistic,
-    },
-  },
-};
-
+/** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...es6,
-  ...mocha,
-  {
-    files: [
-      'lib/**/*.[jt]s',
-      'lib/**/*.[cm][jt]s',
-    ],
-    ...eslintPlugin.configs['flat/recommended'],
-  },
-  {
-    files: [
-      '**/*.js',
-    ],
-    rules: {
-      // [stylistic](https://eslint.style/packages/default)
-      '@stylistic/spaced-comment': [
-        'error',
-        'always',
-        {
-          exceptions: ['--'],
-        },
-      ],
-    },
-  },
+  {languageOptions: {
+    globals: globals.node,
+  }},
+  pluginJs.configs.recommended,
   {
     files: [
       'eslint.config.js',
     ],
     ...meta.configs.recommended,
-    settings,
   },
+  mochaPlugin.configs.flat.recommended,
+  eslintPlugin.configs['flat/recommended'],
 ];
