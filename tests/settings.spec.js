@@ -1,3 +1,4 @@
+/* eslint-disable mocha/no-mocha-arrows */
 import assert from 'node:assert';
 import {getSettings} from '../lib/settings.js';
 
