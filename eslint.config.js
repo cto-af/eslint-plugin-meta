@@ -16,6 +16,6 @@ export default [
     ],
     ...meta.configs.recommended,
   },
-  mochaPlugin.configs.flat.recommended,
+  mochaPlugin.configs.recommended,
   eslintPlugin.configs['flat/recommended'],
 ];
