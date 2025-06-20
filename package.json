@@ -1,6 +1,6 @@
 {
   "name": "@cto.af/eslint-plugin-meta",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Ensure eslint all rules are sorted, not deprecated, and included",
   "keywords": [
     "eslint",
