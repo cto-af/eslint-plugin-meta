@@ -59,14 +59,19 @@ rules: {
 rules: {
   'bad-unknown-bad': 'error',
 }}`,
-      errors: [{messageId: 'unknown', type: 'Literal'}],
+      errors: [{messageId: 'unknown', data: {
+        key: 'bad-unknown-bad',
+      }}],
     },
     {
       code: `export default {
 rules: {
   'foo/bad-unknown-bad': 'error',
 }}`,
-      errors: [{messageId: 'unknownPrefix', type: 'Literal'}],
+      errors: [{messageId: 'unknownPrefix', data: {
+        key: 'foo/bad-unknown-bad',
+        prefix: 'foo',
+      }}],
     },
     {
       code: `
@@ -75,7 +80,9 @@ export default {
 rules: {
   ignored,
 }}`,
-      errors: [{messageId: 'unknown', type: 'Identifier'}],
+      errors: [{messageId: 'unknown', data: {
+        key: 'ignored',
+      }}],
     },
     {
       code: `
@@ -83,7 +90,9 @@ const ignored = 'error';
 export const rules = {
   ignored,
 }`,
-      errors: [{messageId: 'unknown', type: 'Identifier'}],
+      errors: [{messageId: 'unknown', data: {
+        key: 'ignored',
+      }}],
     },
   ],
 });

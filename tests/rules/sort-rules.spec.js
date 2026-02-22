@@ -68,7 +68,9 @@ export default {
 rules: {
   'array-callback-return': ['error', {allowImplicit: true}],
 }}`,
-      errors: [{messageId: 'beforeAny', type: 'Literal'}],
+      errors: [{messageId: 'beforeAny', data: {
+        key: 'array-callback-return',
+      }}],
       settings,
     },
     {
@@ -78,14 +80,18 @@ rules: {
   'constructor-super': 'error',
   'array-callback-return': ['error', {allowImplicit: true}],
 }}`,
-      errors: [{messageId: 'outOfOrder', type: 'Literal'}],
+      errors: [{messageId: 'outOfOrder', data: {
+        key: 'array-callback-return',
+      }}],
       settings,
     },
     {
       code: `export const rules = {
   'array-callback-return': ['error', {allowImplicit: true}],
 }`,
-      errors: [{messageId: 'beforeAny', type: 'Literal'}],
+      errors: [{messageId: 'beforeAny', data: {
+        key: 'array-callback-return',
+      }}],
       settings,
     },
     {
@@ -94,7 +100,9 @@ rules: {
   'constructor-super': 'error',
   'array-callback-return': ['error', {allowImplicit: true}],
 }`,
-      errors: [{messageId: 'outOfOrder', type: 'Literal'}],
+      errors: [{messageId: 'outOfOrder', data: {
+        key: 'array-callback-return'
+      }}],
       settings,
     },
   ],

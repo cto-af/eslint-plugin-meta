@@ -1,35 +1,37 @@
 # Ensure eslint rules are sorted (`sort-rules`)
 
-Please describe the origin of the rule here.
+When you have a large set of rules (e.g. if you have no-unused-rules enabled),
+it's quite nice to have those rules in lexical order to make it easier to find
+rules that need to be modified.
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to keep all of your rules in order, within a section per plugin.
 
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {
+    // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
+    'constructor-super': 'error',
+    'array-callback-return': ['error', {allowImplicit: true}],
+  },
+}
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {
+    // [Possible Problems](https://eslint.org/docs/rules/#possible-problems)
+    'array-callback-return': ['error', {allowImplicit: true}],
+    'constructor-super': 'error',
+  },
+}
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+If you like chaos.
