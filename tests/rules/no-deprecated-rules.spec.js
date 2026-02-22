@@ -52,13 +52,17 @@ rules: {
 rules: {
   'array-bracket-newline': 'off',
 }}`,
-      errors: [{messageId: 'deprecated', type: 'Literal'}],
+      errors: [{messageId: 'deprecated', data: {
+        key: 'array-bracket-newline',
+      }}],
     },
     {
       code: `export const rules = {
   'array-bracket-newline': 'off',
 }`,
-      errors: [{messageId: 'deprecated', type: 'Literal'}],
+      errors: [{messageId: 'deprecated', data: {
+        key: 'array-bracket-newline',
+      }}],
     },
   ],
 });

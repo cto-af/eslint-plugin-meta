@@ -1,35 +1,37 @@
 # Ensure all rules are valid (`no-unknown-rules`)
 
-Please describe the origin of the rule here.
+"Unknown" rules are usually either typos, or rules that used to exist but have
+been deleted.
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to detect unknown rules.
 
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {
+    'bad-unknown-bad': 'error',
+  },
+}
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {
+    ...ignored,
+    'constructor-super': 'error',
+  },
+}
 ```
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+None.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+There are no known reasons not to use this.

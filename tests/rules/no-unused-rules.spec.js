@@ -16,6 +16,10 @@ const settings = {
   },
 };
 
+const deprecated_url = 'https://github.com/cto-af/eslint-plugin-meta/blob/main/docs/rules/no-deprecated-rules.md'
+const unknown_url = 'https://github.com/cto-af/eslint-plugin-meta/blob/main/docs/rules/no-unknown-rules.md';
+const sort_url = 'https://github.com/cto-af/eslint-plugin-meta/blob/main/docs/rules/sort-rules.md';
+
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
@@ -56,7 +60,10 @@ rules: {
 rules: {
   'meta/no-unused-rules': 'error',
 }}`,
-      errors: [{messageId: 'unknownPrefix', type: 'ObjectExpression'}],
+      errors: [{messageId: 'unknownPrefix', data: {
+        key: 'meta/no-unused-rules',
+        prefix: 'meta',
+      }}],
       // No settings
     },
     {
@@ -65,9 +72,18 @@ rules: {
   'meta/no-unused-rules': 'error',
 }}`,
       errors: [
-        {messageId: 'unused', type: 'ObjectExpression'},
-        {messageId: 'unused', type: 'ObjectExpression'},
-        {messageId: 'unused', type: 'ObjectExpression'},
+        {messageId: 'unused', data: {
+          key: 'meta/no-deprecated-rules',
+          url: deprecated_url,
+        }},
+        {messageId: 'unused', data: {
+          key: 'meta/no-unknown-rules',
+          url: unknown_url,
+        }},
+        {messageId: 'unused', data: {
+          key: 'meta/sort-rules',
+          url: sort_url,
+        }},
       ],
       settings,
     },
@@ -76,9 +92,18 @@ rules: {
   'meta/no-unused-rules': 'error',
 }`,
       errors: [
-        {messageId: 'unused', type: 'ObjectExpression'},
-        {messageId: 'unused', type: 'ObjectExpression'},
-        {messageId: 'unused', type: 'ObjectExpression'},
+        {messageId: 'unused', data: {
+          key: 'meta/no-deprecated-rules',
+          url: deprecated_url,
+        }},
+        {messageId: 'unused', data: {
+          key: 'meta/no-unknown-rules',
+          url: unknown_url,
+        }},
+        {messageId: 'unused', data: {
+          key: 'meta/sort-rules',
+          url: sort_url,
+        }},
       ],
       settings,
     },

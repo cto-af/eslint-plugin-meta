@@ -1,35 +1,32 @@
 # Ensure no deprecated rules are used (`no-deprecated-rules`)
 
-Please describe the origin of the rule here.
+Deprecated rules should not be specified.  Detecting them allows determination
+of what the next step should be.
 
 ## Rule Details
-
-This rule aims to...
 
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {
+    'array-bracket-newline': 'off',
+  }
+}
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+export const rules = {
+  'constructor-super': 'error',
+}
 ```
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+None.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+If you depend on deprecated rules.

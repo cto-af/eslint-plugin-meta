@@ -1,35 +1,36 @@
 # Ensure all non-deprecated rules are used (`no-unused-rules`)
 
-Please describe the origin of the rule here.
+This rule is for completionists that want to ensure they have made an explicit
+choice about every possible lint rule.
 
 ## Rule Details
 
-This rule aims to...
+Ensure every known (not not deprecated) rule is mentioned, even if it is turned off.
 
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {}, // Lots of errors, one for each valid rule.
+}
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+export default {
+  rules: {
+    // One mention of every valid rule
+  },
+}
 ```
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+- `ignore`: array of rules that do not need to be specified
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+This rule adds a high workload, as it needs to be run once per new version of
+eslint or any of the plugins that you use.  It also means that the
+"recommended" rule set is no longer useful.
