@@ -1,0 +1,4 @@
+overrides:
+  mocha@11.7.5>diff: ~8.0.3
+  mocha@11.7.5>minimatch: ~10.2.4
+  mocha@11.7.5>serialize-javascript: ~7.0.5
