@@ -1,4 +1,7 @@
+minimumReleaseAgeExclude:
+  - '@cto.af/generate-rules-table@2.0.1'
 overrides:
-  mocha@11.7.5>diff: ~8.0.3
-  mocha@11.7.5>minimatch: ~10.2.4
-  mocha@11.7.5>serialize-javascript: ~7.0.5
+  mocha@11.7.6>diff: ~8.0.4
+  mocha@11.7.6>minimatch: ~10.2.5
+  mocha@11.7.6>serialize-javascript: ~7.0.5
+  brace-expansion: ~5.0.6
