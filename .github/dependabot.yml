@@ -6,3 +6,5 @@ updates:
       interval: "daily"
     allow:
       - dependency-type: "production"
+    # Only security updates
+    open-pull-requests-limit: 0
