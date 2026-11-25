@@ -25,20 +25,21 @@
     "ci": "npm run lint && npm run test"
   },
   "devDependencies": {
-    "@cto.af/generate-rules-table": "^2.0.1",
+    "@cto.af/generate-rules-table": "^2.0.2",
+    "@cto.af/ncurc": "^0.0.3",
     "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^10.4.1",
-    "eslint-plugin-eslint-plugin": "^7.4.0",
-    "eslint-plugin-mocha": "^11.3.0",
-    "globals": "^17.6.0",
-    "mocha": "^11.7.6",
+    "@stylistic/eslint-plugin": "^6.0.1",
+    "eslint": "^10.15.0",
+    "eslint-plugin-eslint-plugin": "^7.6.2",
+    "eslint-plugin-mocha": "^12.0.2",
+    "globals": "^17.14.0",
+    "mocha": "^12.0.3",
     "superc8": "~12.7.0"
   },
   "peerDependencies": {
     "eslint": ">=10"
   },
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@12.22.0",
   "engines": {
     "node": ">=22"
   }
